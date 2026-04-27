@@ -31,6 +31,8 @@
     </style>
 
     <!-- Additional head modules -->
+<script src="https://sdk.games.s3.yandex.net/sdk.js"></script>
+
 
 </head>
 <body class="dark">
@@ -238,11 +240,11 @@
                     return false;
                 }
 
-                const host = window.location.hostname;
-                if (host === "localhost" || host === "127.0.0.1" || host.endsWith(".local")) {
-                    LogStyledMessage("Local Host");
-                    return true;
-                }
+const host = window.location.hostname;
+if (host === "localhost" || host === "127.0.0.1" || host.endsWith(".local") || host === "slxu6h-gif.github.io") {
+    LogStyledMessage("Local Host or GitHub Pages");
+    return true;
+}
             } 
             catch (error) {
                 console.error("Error checking the local host:", error);
@@ -279,7 +281,7 @@
             }
         }
 
-        function LogStyledMessage(message, style = 'color: #FFDF73; background-color: #454545') {
+        function LogStyledMessage(message, style = 'color: #e84900; background-color: #e84900') {
             console.log('%c' + message, style);
         }
 
@@ -334,7 +336,7 @@ LogStyledMessage('Init Storage ysdk');
         }
 
         // Additional script modules
-LogStyledMessage('[PluginYG2 v2.0091] [Build: 12] [Platform: YandexGames]');
+LogStyledMessage('[PluginYG2 v2.0091] [Build: 13] [Platform: YandexGames]');
 
 var cloudSaves = NO_DATA;
 
